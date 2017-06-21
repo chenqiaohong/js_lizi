@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta  content="text/html; charset=utf-8"/>
+	<title>New Document</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+</head>
+<body>
+	<script>
+		//function aa(num){
+		//	var result = "";
+		//	while(num != 0){
+		//		var result = parseInt(num % 8) +result;
+		//		num = parseInt(num / 8);
+		//	}	
+		//	document.write(result);
+		//}
+		//aa(100)
+
+//function cssStyle2DomStyle(sName) {
+//    var a = sName.split("-");
+//    if(a[0] == "-")
+//        a.splice(0,1);
+//    for(var i =1;i<a.length;i++){
+//       a[i] = a[i][0].toUpperCase() + a[i].substring(1, a[i].length);  
+//    }
+//    document.write(a.join(''));  
+//}
+//cssStyle2DomStyle('-ahh-jkjk-io');
+
+//翻转字符串
+//function reserveA(str){
+//	var a = str.split("");
+//	var b = a.reverse().join("");
+//	document.write(typeof(b));
+//}
+//reserveA("hello World");
+
+//求阶乘
+//function sum(num){
+//	var total = 1;
+//	//if(num == 0){
+//	//	return 1;
+//	//}else{
+//	//	for(var i = 1; i<=num; i++){
+//	//		total = total * i;
+//	//	}
+//	//	num = total;
+//	//}
+//	//return num ;
+//	return num > 1? num * sum(num-1):1;
+//}
+//document.write(sum(5));
+
+//验证回文
+//function huiwen(str){
+//	var newStr = str.replace(/\s/g,"").replace(/[^a-zA-Z0-9]/g,"").toLowerCase();
+//	var a = str.split("");
+//	var resStr = a.reverse().join("");
+//	if(newStr == resStr){
+//		return true;
+//	}else{
+//		return false;
+//	}	
+//}
+//document.write(huiwen('1234321'));
+
+//求最长单词长度
+//function huiwen(str){
+//	var newStr = str.split(" ");
+//	for(var i = 0; i < newStr.length; i++){
+//		if(newStr[i].length >= newStr[i+1].length){
+//			 newStr[i] = newStr[i];
+//			 return newStr[i].length;
+//		}else{
+//			 newStr[i] = newStr[i+1];
+//			return newStr[i].length;
+//		}
+//	}
+//}
+//document.write(huiwen('hello absdfaf shijian klklkjhhh ssfs'));
+
+//大写所有单词首字母
+//function huiwen(str){
+//	var newStr = str.split(" ");
+//	var a;
+//	for(var i = 0; i < newStr.length; i++){
+//		newStr[i]= newStr[i][0].toUpperCase() + newStr[i].substring(1,newStr.length);
+//	}
+//	a = newStr.join(' ');
+//	document.write(a);
+//}
+//huiwen('hello absdfaf shijian klklkjhhh ssfs');
+
+//寻找数组中数组中的最大值
+//function huiwen(str){
+//	var newArr = [];
+//	for(var i = 0; i < str.length; i++){
+//		for(var j=0 ;j<str[i].length-1;j++){
+//			if(str[i][j] > str[i][j+1]){
+//				str[i][j+1] = str[i][j];
+//			}else{
+//				str[i][j+1] = str[i][j+1];				
+//			}
+			
+//		}	
+//		document.write(str[i][j] + " ");	
+//	}	
+//}
+//huiwen([[1,90,60,120,70,100],[900,566,1000,500],[1000,2000,1200]]);
+
+//检查字符串是否以指定字符串结尾
+//function huiwen(endStr,target){
+//	var tarlen = target.length;
+//	substr() 方法可在字符串中抽取从 start 下标开始的指定数目的字符。
+//	var subStr = endStr.substr(-tarlen,tarlen);
+//    if(subStr == target){
+//        return true;
+//    }else{
+//        return false;
+//    }
+//}
+//document.write(huiwen("abcd","cd"));
+//重复指定次数的字符串
+//function huiwen(endStr,num){
+//	var newStr = "";
+//	if(num == 1){
+//		return endStr;
+//	}else{
+//		for(var i = 1; i<= num;i++){
+//			 newStr = newStr + endStr;
+//		}
+//	}
+//	return newStr;
+//}
+//document.write(huiwen("abcd",6));
+
+//截断字符串
+//...也要算3个字符长度
+//返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。
+//function huiwen(str,num){
+	//方法一
+	//if(str.length <= num){
+	//	return str
+	//}else if(num > 3){
+	//    str = str.slice(0,num - 3) + '...';
+	//}else{
+	//    str = str.slice(0,num) + "...";
+	//}
+	//return str;
+
+	//方法二
+//	var newStr = [];
+//	if(str.length <= num){
+//		newStr.push(str);	
+//		return newStr;
+//	}else if(num > 3){
+//		for(var i =0;i<num-3;i++){
+//			newStr.push(str[i]);
+//		}		
+//	}else{
+//		for(var i =0;i<num;i++){
+//			newStr.push(str[i]);
+//		}
+//	}
+//	return newStr.join("") + "...";
+//}
+//document.write(huiwen("abcddfasfasd",8));
+
+//返回数组被截断n个元素后剩余的元素
+//function huiwen(endStr,num){
+//	var array = endStr.split("");
+//	if(endStr.length <= num){
+//		return "没有那么多元素";
+//	}else{
+//		return array.slice(num,array.length).join("");
+//	}	
+//}
+//document.write(huiwen("absfsda",6));
+
+//判断一个字符串是否包含了第二个字符串元素的所有字符（不区分大小写）
+//function huiwen(str1,str2){
+//	var newStr1 = str1.toLowerCase();
+//	var newStr2 = str2.toLowerCase();
+//	//如果要检索的字符串值没有出现，则该方法返回 -1。
+//	if(newStr1.indexOf(newStr2)!= -1){
+//		return true;
+//	}else{
+//		return false;
+//	}
+//}
+//document.write(huiwen("dfsdUUIA","dfsdUUIAS"));
+
+//去掉数组中的假值
+//function huiwen(str){
+//	//方法一
+//	//var newArr = [];
+//	//for(var i = 0; i<str.length; i++){
+//	//	if(str[i] != false){
+//	//		newArr.push(str[i]);
+//	//	}
+//	//}
+//	//return newArr;
+
+//	//方法二
+//	//filter()会测试数组的每个元素，返回符合filter条件，也就是满足isBool()的元素。
+//    var newArr =  str.filter(isBool);
+//	   return newArr;
+//	}
+//	function isBool(value){
+//	  return Boolean(value) > 0;
+//	}
+//}
+//document.write(huiwen(["dfsdUUIA","dfsdUUIAS",90,false,10,"ass",false]));
+
+//先排序，再找到元素在数组中的位置
+function destroyer(arr,num) {  
+	arr.sort(arr)
+	return arr.indexOf(num);
+}
+document.write(destroyer([20,30,60,40,80,70,50],80));
+	</script>
+</body>
+</html>
